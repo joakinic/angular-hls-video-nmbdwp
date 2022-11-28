@@ -1,0 +1,30 @@
+<video
+  id="sxmvideo"
+  width="600"
+  height="300"
+  class="video-js vjs-default-skin"
+  controls
+>
+  <source
+    [src]="
+      'https://b-647daf39.kinesisvideo.us-west-2.amazonaws.com/hls/v1/getHLSMasterPlaylist.m3u8?SessionToken=CiApkrshR2YGG2iNUz3hcqGe9ZL1j59TGkkcG0eWsbUWsRIQ4GBDiFE19sztYljPpMbI3xoZRgcxb67XBSv2kb9q9NytU8U2JFFlvsR3vSIgrUmOhQh4kP6EjQBz2T9U9nWJZyw7MlYgE_Wy6-argOc~'
+    "
+    type="application/x-mpegURL"
+  />
+</video>
+
+<button class="btn btn-primary" (click)="create()">
+  Click here -- New Stream
+</button>
+
+<div class="container" style="margin:20px">
+  <div class="row">
+    <input type="number" [(ngModel)]="seekTime" placeholder="Enter Seek time" />
+
+    <button class="btn btn-danger" (click)="destroy()">destroy</button>
+
+    <button class="btn btn-info" (click)="seek()">seek</button>
+
+    <button class="btn btn-warning" (click)="play()">play/pause</button>
+  </div>
+</div>
